@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+    --card: 210 40% 94%;
+    --card-foreground: 215 25% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+    /* Updated primary color to darker emerald for better contrast */
+    --primary: 158 64% 35%;
+    --primary-foreground: 0 0% 100%;
+    /* Updated secondary color to darker emerald for better contrast */
+    --secondary: 160 84% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 25% 27%;
+    /* Updated accent color to darker emerald for better contrast */
+    --accent: 160 84% 30%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 25 95% 53%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 210 40% 94%;
+    /* Updated ring color to darker emerald for better contrast */
+    --ring: 158 64% 35%;
+    /* Updated chart colors for better contrast */
+    --chart-1: 158 64% 35%;
+    --chart-2: 160 84% 30%;
+    --chart-3: 25 95% 53%;
+    --chart-4: 215 16% 47%;
+    --chart-5: 210 40% 94%;
+    --radius: 0.5rem;
+    --sidebar: 210 40% 94%;
+    --sidebar-foreground: 215 25% 27%;
+    /* Updated sidebar colors for better contrast */
+    --sidebar-primary: 158 64% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 84% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 91%;
+    /* Updated sidebar ring color for better contrast */
+    --sidebar-ring: 158 64% 35%;
+  }
+
+  .dark {
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
+    --card: 215 28% 17%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 28% 17%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    /* Updated dark mode primary foreground to darker emerald for better contrast */
+    --primary-foreground: 158 64% 35%;
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 217 10% 64%;
+    --accent: 215 25% 27%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 216 12% 84%;
+    /* Updated dark mode chart colors for better contrast */
+    --chart-1: 158 64% 52%;
+    --chart-2: 160 84% 39%;
+    --chart-3: 25 95% 53%;
+    --chart-4: 215 16% 47%;
+    --chart-5: 210 40% 94%;
+    --sidebar: 215 28% 17%;
+    --sidebar-foreground: 0 0% 98%;
+    /* Updated dark mode sidebar colors for better contrast */
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 84% 39%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 25% 27%;
+    --sidebar-ring: 216 12% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
