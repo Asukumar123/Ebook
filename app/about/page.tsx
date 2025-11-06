@@ -3,32 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 export default function AboutPage() {
-  const teamMembers = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Founder & CEO",
-      bio: "Educational technology expert with 15+ years of experience in digital learning platforms.",
-      expertise: ["EdTech Strategy", "Learning Science", "Product Development"],
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Head of Content",
-      bio: "Former university professor specializing in curriculum development and educational content creation.",
-      expertise: ["Curriculum Design", "Content Strategy", "Academic Writing"],
-    },
-    {
-      name: "Dr. Emma Thompson",
-      role: "Chief Learning Officer",
-      bio: "Cognitive scientist focused on understanding how people learn and retain information.",
-      expertise: ["Learning Psychology", "User Research", "Assessment Design"],
-    },
-    {
-      name: "Lisa Park",
-      role: "Head of Technology",
-      bio: "Full-stack developer passionate about creating accessible and user-friendly educational platforms.",
-      expertise: ["Web Development", "UX Design", "Accessibility"],
-    },
-  ]
 
   const values = [
     {
@@ -141,7 +115,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-8">Our Story</h2>
           <div className="prose prose-gray max-w-none text-muted-foreground">
             <p className="text-lg leading-relaxed mb-6">
-              EduHansa was founded in 2020 with a simple yet powerful idea: that everyone deserves access to quality
+              EduHansa was founded in 2025 with a simple yet powerful idea: that everyone deserves access to quality
               educational resources, regardless of their circumstances. Our founders, a group of educators and
               technologists, recognized the growing need for accessible digital learning platforms.
             </p>
@@ -160,39 +134,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Meet Our Team</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The passionate individuals behind EduHansa's mission to democratize education
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, index) => (
-            <Card key={index}>
-              <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-primary" />
-                </div>
-                <CardTitle className="font-heading">{member.name}</CardTitle>
-                <p className="text-sm text-primary font-medium">{member.role}</p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>
-                <div className="flex flex-wrap gap-1">
-                  {member.expertise.map((skill) => (
-                    <Badge key={skill} variant="outline" className="text-xs">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
 
       {/* Stats */}
       <section className="mb-16">
@@ -200,15 +142,15 @@ export default function AboutPage() {
           <CardContent className="p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">10,000+</div>
+                <div className="text-3xl font-heading font-bold text-primary mb-2">100+</div>
                 <div className="text-sm text-muted-foreground">eBooks Available</div>
               </div>
               <div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">50,000+</div>
+                <div className="text-3xl font-heading font-bold text-primary mb-2">50+</div>
                 <div className="text-sm text-muted-foreground">Active Learners</div>
               </div>
               <div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">100+</div>
+                <div className="text-3xl font-heading font-bold text-primary mb-2">10+</div>
                 <div className="text-sm text-muted-foreground">Subject Areas</div>
               </div>
               <div>
@@ -232,17 +174,17 @@ export default function AboutPage() {
               <div className="flex flex-col items-center gap-2">
                 <Mail className="h-6 w-6 text-primary" />
                 <span className="font-medium">Email</span>
-                <span className="text-sm text-muted-foreground">hello@eduhansa.com</span>
+                <span className="text-sm text-muted-foreground">asukumar8455@gmai.com</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Phone className="h-6 w-6 text-primary" />
                 <span className="font-medium">Phone</span>
-                <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-sm text-muted-foreground">676410</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <MapPin className="h-6 w-6 text-primary" />
                 <span className="font-medium">Address</span>
-                <span className="text-sm text-muted-foreground">San Francisco, CA</span>
+                <span className="text-sm text-muted-foreground">Patna,India</span>
               </div>
             </div>
           </CardContent>

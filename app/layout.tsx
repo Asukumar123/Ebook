@@ -1,48 +1,83 @@
-import type React from "react"
+// app/layout.tsx
 import type { Metadata } from "next"
-import { Space_Grotesk, DM_Sans } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { AuthProvider } from "@/components/auth-context"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Providers } from "@/app/providers"
+import { Toaster } from "@/components/ui/toaster"
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-})
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-})
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "EduHansa | Educational eBook Platform",
-  description:
-    "Discover and read educational eBooks, explore our blog, and learn more about EduHansa's mission to advance education through technology.",
-    generator: 'v0.app'
+  title: "EduHansa - Digital Learning Library",
+  description: "Access thousands of educational eBooks and resources. Learn at your own pace with our comprehensive digital library.",
+  keywords: ["education", "ebooks", "learning", "digital library", "online books", "educational resources"],
+  authors: [{ name: "EduHansa Team" }],
+  creator: "EduHansa",
+  publisher: "EduHansa",
+  openGraph: {
+    title: "EduHansa - Digital Learning Library",
+    description: "Access thousands of educational eBooks and resources. Learn at your own pace with our comprehensive digital library.",
+    url: "https://eduhansa.com",
+    siteName: "EduHansa",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "EduHansa - Digital Learning Library",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EduHansa - Digital Learning Library",
+    description: "Access thousands of educational eBooks and resources. Learn at your own pace with our comprehensive digital library.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
-      <body className="font-sans antialiased">
-        <Providers>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            <div className="flex flex-col min-h-screen">
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AuthProvider>
+            <div className="relative flex min-h-screen flex-col">
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
-          </ThemeProvider>
-        </Providers>
+            <Toaster />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
